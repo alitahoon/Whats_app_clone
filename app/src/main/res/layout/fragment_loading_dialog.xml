@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/backGroundDarkGreen">
+    <com.airbnb.lottie.LottieAnimationView
+        android:padding="30dp"
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:lottie_rawRes="@raw/data"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:id="@+id/title_dialog_loding_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sending code Please Wait..."
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:letterSpacing="0.1"
+        android:fontFamily="@font/archivo_black"/>
+
+</LinearLayout>

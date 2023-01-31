@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity"
+    android:background="@color/backGroundDarkGreen">
+    <com.google.android.material.appbar.AppBarLayout
+        android:visibility="gone"
+        android:id="@+id/appBarLayout_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/menuColor">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/chatHeader_btnBack"
+                    android:layout_weight="0.2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back_24"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:id="@+id/chatHeader_profileImage"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_account_circle_24"/>
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/chatHeader_profileName"
+                        android:layout_gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile Name"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/chatHeader_profileOnlineState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Online"
+                        android:layout_gravity="left"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginHorizontal="5dp"
+                    android:id="@+id/chatHeader_btnStartvideoCall"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_videocam_24"/>
+                <ImageView
+                    android:id="@+id/chatHeader_btnStartSoundCall"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/fui_ic_phone_white_24dp"/>
+                <ImageView
+                    android:layout_marginHorizontal="5dp"
+                    android:id="@+id/chatHeader_btnMoreOptions"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_more_vert_24"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mainAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/menuColor">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="WhatsApp"
+                    android:textColor="@color/menuTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_baseline_camera_alt_24"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_search_24"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_baseline_more_vert_24_main_menu"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="15dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_back"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/ic_baseline_arrow_back_24" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:fontFamily="@font/archivo_black"-->
+<!--            android:gravity="center"-->
+<!--            android:letterSpacing="0.1"-->
+<!--            android:text="Main Activity"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16sp" />-->
+<!--    </LinearLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/mainFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true" >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_storyTextWrite"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="45dp"
+                android:layout_marginBottom="60dp"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/fab_text_write"
+                android:src="@drawable/ic_pencil_50_white"
+                app:backgroundTint="@color/menuColor"
+                app:borderWidth="0dp"
+                app:elevation="2dp"
+                app:fabSize="normal"
+                app:fabCustomSize="45dp"
+                app:maxImageSize="30dp"
+                app:pressedTranslationZ="12dp"
+                app:tint="@color/white" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_main"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="@color/menuSelectedItemColor"
+                android:src="@drawable/ic_baseline_message_white_50"
+                app:fabCustomSize="60dp"
+                app:maxImageSize="30dp"
+                app:tint="@android:color/white" />
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
